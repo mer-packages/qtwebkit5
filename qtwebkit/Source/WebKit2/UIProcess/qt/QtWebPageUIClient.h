@@ -62,8 +62,6 @@ private:
     static void policyForNotificationPermissionRequest(WKPageRef, WKSecurityOriginRef, WKNotificationPermissionRequestRef, const void*);
 
     QQuickWebView* m_webView;
-    QUrl m_lastHoveredURL;
-    QString m_lastHoveredTitle;
 };
 
 } // namespace WebKit

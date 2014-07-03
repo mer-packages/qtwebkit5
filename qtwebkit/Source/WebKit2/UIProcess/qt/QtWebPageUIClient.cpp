@@ -79,11 +79,7 @@ void QtWebPageUIClient::runOpenPanel(WKOpenPanelResultListenerRef listenerRef, c
 
 void QtWebPageUIClient::mouseDidMoveOverElement(const QUrl& linkURL, const QString& linkTitle)
 {
-    if (linkURL == m_lastHoveredURL && linkTitle == m_lastHoveredTitle)
-        return;
-    m_lastHoveredURL = linkURL;
-    m_lastHoveredTitle = linkTitle;
-    emit m_webView->linkHovered(m_lastHoveredURL, m_lastHoveredTitle);
+    emit m_webView->linkHovered(linkURL, linkTitle);
 }
 
 void QtWebPageUIClient::permissionRequest(QWebPermissionRequest* request)
